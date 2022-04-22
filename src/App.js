@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const App = () => {
   const profiles = [
@@ -11,7 +12,8 @@ const App = () => {
       age: 18,
     },
     {
-      name: "Nanashi",
+      name: "Noname",
+      age: 20,
     },
   ];
   return (
@@ -31,8 +33,9 @@ const User = (props) => {
   );
 };
 
-User.defaultProps = {
-  age: 20,
+User.propTypes = {
+  name: PropTypes.string,
+  age: PropTypes.number.isRequired,
 };
 
 export default App;
