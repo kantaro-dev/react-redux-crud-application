@@ -1,11 +1,32 @@
 import React, { Component } from "react";
 
+// class App extends Component {
+//   render() {
+//     return React.createElement("div", null, "Hello, world");
+//   }
+// }
+
+// class App extends Component {
+//   render() {
+//     const greeting = "Hi! React";
+//     const dom = <h1 className="foo">{greeting}</h1>;
+
+//     return dom;
+//   }
+// }
+
 class App extends Component {
   render() {
     return (
-      <div>
-        <h1>Hello, world!</h1>
-      </div>
+      <React.Fragment>
+        <label htmlFor="bar">bar</label>
+        <input
+          type="text"
+          onChange={() => {
+            console.log("I am changed!");
+          }}
+        />
+      </React.Fragment>
     );
   }
 }
